@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Bradley Morris</title>
+
+		<link rel="stylesheet" href="css/bootstrap.css" />
+				<link rel="stylesheet" href="style.css" />
+		<!-- JS -->
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#submit").click(function() {
+					gross = $("#gross").val();
+					tax = (gross*0.2);
+					remainder = (gross-tax)
+					accounts = (remainder/2);
+					
+					$("#tax").html(tax.toFixed(2));
+					$(".accounts").html(accounts.toFixed(2));
+					return false;
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header" class="padding-10">
+				<img src="img/logo.png" alt="Brad Morris Logo" class="left">
+				
+				<h1 style="float:right; margin-top:20px; padding:0 0 10px 160px; background: url(img/SprinterLogo.png) no-repeat;">: Taxation Calculator</h1>
+				<div class="clear"></div>
+			</div>
+			
+			<div id="content" class="padding-10">
+				<table class="table table-bordered">
+					<tr>
+						<td style="width: 200px">Gross Amount</td>
+						<td><form class="form-inline">&pound;<input type="text" size="2" id="gross"/><input type="submit" value="Calculate" class="btn" id="submit"/></form></td>
+					</tr>
+					<tr>
+						<td>Tax</td>
+						<td>&pound;<span id="tax"></span></td>
+					</tr>
+					<tr>
+						<td>Acct 1</td>
+						<td>&pound;<span class="accounts"></span></td>
+					</tr>
+					<tr>
+						<td>Acct 2</td>
+						<td>&pound;<span class="accounts"></span></td>
+					</tr>
+				</table>
+			
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">
+				<span class="left">
+					&copy; Bradley Morris 2011
+				</span>
+				<span class="right">
+					Powered By SprinterCRM
+				</span>
+			</div>
+		</div>
+	</body>
+</html>

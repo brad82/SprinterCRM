@@ -1,0 +1,336 @@
+/*
+Theme Name: Bradley Morris
+Theme URI: http://bradleymorris.co.uk
+Description: Main Skin for Bradley Morris.co.uk
+Author: Brad Morris
+Author URI: http://bradleymorris.co.uk
+Version: 1.0
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/*
+ * CSS Reset sheet by Eric Meyer.
+ * Cheers Eric! :)
+ * 
+ * http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Clearfix */
+* html .clearfix{
+  height: 1%;
+  overflow: visible;
+}
+*+html .clearfix{
+  min-height: 1%;
+}
+.clearfix:after, .clear{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+/**
+ * End Reset Sheet
+*/
+
+/* Typography */
+p {
+	margin: 10px 0;
+	line-height: 24px;
+}
+#h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+	line-height: 1.5em;
+	margin: 0 0 20px 0;
+}
+h1 { font-size: 25px }
+h2 { font-size: 18px }
+header h1 { 
+	margin: 10px 0 !important; 
+	font-family: "Segoe UI Light";
+	letter-spacing: -2px;
+	font-weight: 100;
+	font-size: 25px;
+	color: #585858;
+}
+.aligncenter, img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.blue { color: #00aeef }
+
+/* Entry Typsetting */
+.entry-meta, 
+.entry-meta a 
+.entry-meta a:visited {
+	color: #888;
+	font-size: 12px;
+}
+.entry-title a:link, .entry-title a:visited {
+	color: black;
+	text-decoration: none;
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+#content .entry-title {
+	color: black;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin-bottom: 0;
+}
+.indent { margin-left: 15px; }
+/* Structure */
+
+html {
+    background: url(img/bgnd.jpg) repeat-x #fff;
+    /* Height is 100%, so the body can be 100% */
+    height: 100%;
+}
+
+body {
+    background: url(img/bgnd-swirl.png) no-repeat bottom right fixed;
+    margin: 0;
+    padding: 0 0 1px 0;
+    /* Height is 100%, so the tiled BG will tile all the way down
+       the page, not just as far down as the page's content
+       (when the content's height is less than the window's height) */
+    height: 100%;
+    text-align: center;
+	font-family: "Lucida Grande",Verdana,"Bitstream Vera Sans",Arial,sans-serif;
+}
+/*
+Hackety-hack-hack...
+FF2, with the above code, will only display the repeat-y image for as
+    high as the window's viewport is; higher content (upon
+    scrolling) will not have the bg.
+This "hack" makes the tiled background work properly in FF2.
+This type of "advanced selector" is not understood by IE6...dunno
+ 'bout IE7.
+*/
+html>body {
+    min-height: 100%;
+    height: auto;
+}
+
+header {
+	border-bottom: 1px dotted #C2C2C2;
+	border-top: 1px dotted #C2C2C2;
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+}
+header.box {
+	background: #e0e0e0;
+	border: 1px solid #b8b8b8;
+	padding: 0 10px;
+}
+
+
+#wrapper {
+	background: url(img/wrapper_bgnd.png) repeat-y;
+	margin: 0 auto;
+	padding: 0 41px;
+	width: 824px;
+	text-align: left;
+}
+#header{
+
+}
+#main-nav { margin: 25px 0 0 0; }
+#main-nav, #main-nav a {
+	color: #3a3a3c;
+	font-family: 'Open Sans';
+	font-size: 19px;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+#main-nav a {
+	padding: 0 0 3px 0;
+	border-bottom: 2px solid;
+}
+#main-nav a:hover { border-color: #00aeef }
+
+#main-nav li.current_page_item a { color: #00aeef }
+#main-nav li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 15px;
+}
+
+#splash-container {
+	border-top: solid 1px #dbdbdb;
+	border-bottom: solid 1px #dbdbdb;
+}
+#content { 
+	min-height: 300px;
+	font-size: 12px
+}
+
+#footer {
+	margin: 0 auto 150px auto;
+	width: 824px;
+	padding: 0 40px 9px 40px;
+	height: 52px;
+	background: url(img/footer_shadow.png) top no-repeat;
+	text-align: left;
+}
+#footer-content {
+	padding: 16px 10px 0 10px;
+	background: url(img/footer_bgnd.png) top repeat-x #dedede;
+	height: 26px;
+	color: #414141;
+	font-family: Helvetica, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 white;
+}
+#footer-content a,
+#footer-content a:visited,
+#footer-content a:hover {
+	color: #00aeef
+}
+#footer-content a.external {
+	background: url("img/Icon_External_Link.png") no-repeat left;
+	padding-left: 15px;
+}
+div.blogroll { 
+	width: 575px;
+}
+#sidebar.home {
+	width: 260px;
+	padding: 0 0 0 15px;
+	margin: 0 0 0 15px;
+	border-left: 1px dotted #E6E6E6
+}
+#sidebar.home h1 {
+	margin: 10px 0 !important; 
+	font-family: "Segoe UI Light";
+	letter-spacing: -2px;
+	font-weight: 100;
+	font-size: 25px;
+	color: #585858;
+}
+#sidebar.home h2 a span.twitter {
+	font-size: 9px;
+	text-decoration: underline;
+}
+#sidebar.home h2 a {
+	padding: 0 0 0 35px;
+	background: url(img/twitter_bird.png) no-repeat;
+}
+#sidebar.home a,
+#sidebar.home a:visited{
+	color: #585858;
+	text-decoration: none;
+}
+#sidebar.home li a,
+#sidebar.home li a:visited{
+	color: #00aeef 
+}
+#sidebar.home li p {
+	line-height: 18px;
+	margin: 0 0 0 0;
+	color: #222;
+}
+#sidebar.home li span {
+	font-size: 11px;
+	color: #8c8c8c;
+	font-style: italic;
+}
+#sidebar.home li { margin: 10px 0; }
+
+#content.home .entry-content { width: 490px; color: #404040 }
+/**
+ * Universal Classes
+*/
+.padding-10 { padding: 10px; }
+.padding-20 { padding: 20px; }
+.margin-bottom-10 { margin: 0 0 10px 0; }
+.left		{ float: left; }
+.right		{ float: right; }
+
+/**
+ * Page Specific Classes
+ */
+
+#about-me-bio img, #about-me-bio p{
+	float: left;
+}
+#about-me-bio img {
+	padding: 11px 15px 0 0;
+}
+#about-me-bio p {
+	font-size: 16px;
+	color: #484848;
+	width: 615px;
+	font-family: Arial;
+	line-height: 26px;
+	margin-left: 10px;
+}
+#about-me-content {
+	margin: 15px 0;
+	padding: 5px 3px;
+	border-top: 1px solid #dbdbdb;
+	clear: both;
+	color: #373737;
+}
+#about-me-content div.website-design {
+	background: url(/assets/website-design.png) no-repeat 0px 8px;
+	min-height: 330px;
+	padding: 0 0 0 55px;
+}
+#about-me-content div.website-design p {
+	margin: 10px 0 30px 0;
+}
+
+.error404 {
+	background: url(img/sad-face.jpg) no-repeat;
+	padding: 0 0 0 180px
+}
+
+form { margin:0 0 0 0px; }
+#gross { width: 50px; }
